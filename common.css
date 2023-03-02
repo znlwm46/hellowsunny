@@ -1,0 +1,70 @@
+@charset "utf-8"; 
+
+/* font */
+@font-face {
+    font-family: 'OTWelcomeRA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/OTWelcomeRA.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+/* el */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+em, img, small, strike, strong, sub,
+b, u, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, 
+menu, nav, output, section, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+body{
+    font: 14px "맑은 고딕","Malgun Gothic",sans-serif ;
+    color: #353535;
+    letter-spacing: -1px;
+    margin: 0;
+}
+ol, ul {
+	list-style: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+h1{
+    font-size: 2em;
+    margin: 0.67em 0;
+}
+a{
+    display: inline-block;
+    text-decoration: none;
+    color: #353535;
+    background-color: transparent;
+}
+input{
+    margin: 0;
+}
+
+/* layout */
+.wid-1000{
+    width:1000px;
+    margin: 0 auto;
+}
+
+/* common class */
+.blind{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: polygon(0 0,0 0,0 0);
+}

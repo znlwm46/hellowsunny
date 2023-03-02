@@ -1,0 +1,456 @@
+@charset "utf-8"; 
+
+/* 헤더 상단 팝업 */
+.hd-pop{
+    background:#daedf2 url(/img/line.png);
+}
+.hd-pop .hd-pop-inner{
+    position: relative;
+    padding: 20px 0;
+}
+.hd-pop .hd-pop-inner .slide-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25%;
+    height: 118px;
+    padding-left: 13px;
+    padding-right: 25px;
+    border-right: 1px solid #bdc2c2;
+    box-sizing: border-box;
+}
+.hd-pop .hd-pop-inner .slide-item:nth-child(4n){
+    border-right: 0;
+}
+.hd-pop .slide-item .pop-tit{
+    display: block;
+    font-size: 16px;
+    color: #0b4596;
+    font-weight: bold;
+    margin-bottom: 10px;
+    line-height: 1;
+}
+.hd-pop .slide-item .desc{
+    padding-bottom: 10px;
+    font-size: 13px;
+    color: #545454;
+    word-break: keep-all;
+}
+.hd-pop .slide-item .btn-more{
+    width: 77px;
+    padding: 6px 0;
+    font-size: 12px;
+    text-align: center;
+    border: 1px solid #919191;
+    background: #fff;
+}
+/* 좌우측 버튼 */
+.slick-prev:before{
+    content: "";
+    display: block;
+    height: 30px;
+    background: url(/img/arrow_left.png) no-repeat center / 18px 26px;
+}
+.slick-next:before{
+    content: "";
+    display: block;
+    height: 30px;
+    background: url(/img/arrow_right.png) no-repeat center / 18px 26px;
+}
+/* 오늘 하루 닫기 */
+.hd-pop .close-box{
+    position: absolute;
+    right:0;
+    font-size: 13px;
+}
+.hd-pop .close-box .btn-hide1day{
+    float: left;
+    margin-right: 15px;
+}
+.hd-pop .close-box input[type="checkbox"]{
+    vertical-align: middle;
+}
+.hd-pop .close-box .btn-close:after{
+    content: "X";
+    display: inline-block;
+    margin-left: 5px;
+}
+
+/* header */
+.header{
+    border-bottom: 2px solid #00499c;
+}
+.header .hd-inner{
+    width: 1000px;
+    margin: 0 auto;
+    padding-top: 25px;
+}
+.header .top_area:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.header .top_area .logo{
+    float: left;
+}
+.header .top_area .logo > a{
+    display: block;
+    width: 160px;
+    height: 34px;
+    background: url(../img/logo.png) no-repeat center;
+    text-indent: -9999px;
+}
+.header .top_area .snb{
+    float: right;
+}
+.header .top_area .snb .item{
+    display: inline-block;
+}
+.header .top_area .snb .item > a:focus,
+.header .top_area .snb .item > a:hover{
+    text-decoration: underline;
+}
+.header .top_area .snb .item > a:after{
+    content: "|";
+    display: inline-block;
+    margin: 0 10px;
+}
+.header .top_area .snb .item:last-child > a:after{
+    content: none;
+}
+/* gnb */
+.gnb > ul{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    margin-top: 15px;
+}
+.gnb .nav-item{
+    margin-right: 20px;
+}
+.gnb .nav-item:last-child{
+    margin-right: 0;
+}
+.gnb .nav-item > a{
+    display: block;
+    padding-bottom: 15px;
+    font: bold 17px "OTWelcomeRA";
+    letter-spacing: -.7px;
+}
+/* gnb mouseover */
+.gnb .nav-item:hover > a{
+    color: #0b4596;
+    background: url(../img/btn_gnb_on.png) no-repeat bottom;
+}
+/* sitemap button */
+.gnb .siteMap > a{
+    display: block;
+    width: 93px;
+    height: 32px;
+    font: bold 14px "OTWelcomeRA";
+    line-height: 32px;
+    text-align: center;
+    border: 1px solid #e3e3e3;
+}
+.gnb .siteMap > a:before{
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 12px;
+    background: url(../img/btn_menu_open.png) no-repeat center;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+/* sub menu */
+.sub-nav{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    border-top: 1px solid #00499c;
+    z-index: 9999;
+}
+.sub-nav .sub-nav-inner{
+    width: 1000px;
+    margin: 0 auto;
+}
+.sub-nav .nav-wrap{
+    padding: 32px 0;
+    /* depth2 안보이게 */
+    display: none;
+}
+.sub-nav .nav-wrap.active{
+    display: block;
+}
+.sub-nav .nav-wrap:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.sub-nav .nav-title{
+    float: left;
+    width: 160px;
+    font-size: 25px;
+    font-weight: bold;
+    margin-right: 30px;
+    letter-spacing: -1.3px;
+}
+/* depth2 */
+.sub-nav .dep2{
+    float: left;
+    display: flex;
+    flex-wrap: wrap;
+    width: calc(100% - 190px);
+}
+.sub-nav .dep2 .col-ul-wrap{
+    width: calc(25% - 20px);
+    margin-right: 20px;
+}
+.sub-nav .dep2 .dep2-li{
+    font-weight: bold;
+    color: #0e0e0e;
+}
+.sub-nav .dep2 .dep2-li a{
+    width: 100%;
+    letter-spacing: -1.3px;
+    color: #0e0e0e;
+}
+.sub-nav .dep2 .dep2-li > a{
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #aeb2b6;
+    font-size: 15px;
+}
+.sub-nav .dep2 .dep2-li > a:after{
+    content: "";
+    display: block;
+    float: right;
+    background: url(/img/arrow_blue.png) no-repeat center;
+    width: 8px;
+    height: 14px;
+    padding-top: 5px;
+}
+/* depth3 */
+.sub-nav .dep3{
+    margin: 15px 0 37px 0;
+    border-top: 1px solid #aeb2b6;
+}
+.sub-nav .dep3 .dep3-li > a{
+    padding: 10px 0;
+    border-bottom: 1px solid #dde0e4;
+    font-size: 12px;
+    color: #454545;
+    font-weight: 500;
+}
+/* main */
+.banner-section .slick-slide{
+    height: 400px;
+}
+.banner-section .slick-slide img{
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.container .quickList{
+    background: #eff4f8;
+}
+.container .quickList-inner{
+    width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.container .quickList .item{
+    margin: 20px 0;
+    border-right: 1px solid #c2c9ce;
+    font-weight: bold;
+    text-align: center;
+    flex: 1;
+}
+.container .quickList .item:last-child{
+    border-right: none;
+}
+.container .quickList .item_title{
+    font-size: 18px;
+    line-height: 1.3;
+}
+.main{
+    border-top: 1px solid #c2c9ce;
+}
+.main .section .inner-section{
+    margin-top: 15px;
+}
+.main .section .interest-rate-section{
+    display: flex;
+    flex-direction: column;
+}
+.main .section .interest-rate-section > ul{
+    display: flex;
+    justify-content: space-between;
+    order: 2;
+}
+.main .section .interest-rate-section .btn-more{
+    order: 1;
+    display: block;
+    text-align: right;
+    font-size: 12px;
+}
+.main .section .interest-rate-section li .inrbox{
+    width: 240px;
+    padding: 115px 14px 14px;
+    box-sizing: border-box;
+}
+.main .section .interest-rate-section li:nth-child(1) .inrbox{
+    background: #556fb5 url(/img/main/interest-rate-icon01.png) no-repeat center top 20px;
+}
+.main .section .interest-rate-section li:nth-child(2) .inrbox{
+    background: #448aca url(/img/main/interest-rate-icon01.png) no-repeat center top 20px;
+}
+.main .section .interest-rate-section li:nth-child(3) .inrbox{
+    background: #75b815 url(/img/main/interest-rate-icon01.png) no-repeat center top 20px;
+}
+.main .section .interest-rate-section li:nth-child(4) .inrbox{
+    background: #32b16c url(/img/main/interest-rate-icon01.png) no-repeat center top 20px;
+}
+.main .section .interest-rate-section .tit-area,
+    .main .section .interest-rate-section .desc{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main .section .interest-rate-section .item-title{
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+}
+.main .section .interest-rate-section .tit-area > p{
+    font-size: 12px;
+    color: #fff;
+}
+.main .section .interest-rate-section .rate-type{
+    font-size: 12px;
+    color: #fff;
+}
+.main .section .interest-rate-section .rate{
+    font-size: 28px;
+    color: #ff0;
+    font-weight: bold;
+}
+.main .latest-board-section{
+    display: flex;
+    justify-content: space-between;
+}
+.main .latest-board-section .board{
+    width: 492px;
+    padding: 20px 25px;
+    border: 1px solid #d9e0e6;
+    box-sizing: border-box;
+}
+.main .latest-board-section .board .tit-area{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+.main .latest-board-section .board .tit-area > h3{
+    font-size: 17px;;
+}
+.main .latest-board-section .board .tit-area .btn-more{
+    font-size: 12px;
+    color:#0e0e0e;
+}
+.main .latest-board-section li{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    padding-left: 18px;
+}
+.main .latest-board-section li:last-child{
+    margin-bottom: 0;
+}
+.main .latest-board-section li:before{
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    font-size: 16px;
+    width: 3px;
+    height: 3px;
+    background-color: #585858;
+    top: 50%;
+    transform: translateY(-40%);
+}
+.main .latest-board-section li .tit{
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.main .latest-board-section li .date{
+    margin-left: 50px;
+}
+.main .site_guide_list{
+    display: flex;
+}
+.main .site_guide_list .item{
+    position: relative;
+    height: 320px;
+    margin-right: 15px;
+    border: 1px solid #d9e0e6;
+    flex: 1;
+}
+.main .site_guide_list .item:last-child{
+    margin-right: 0;
+}
+.main .site_guide_list .item .bg-area{
+    display: block;
+    height: 158px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.main .site_guide_list .item:nth-child(1),
+.main .site_guide_list .item:nth-child(2){
+    text-align: center;
+}
+.main .site_guide_list .item:nth-child(1) .bg-area{
+    background-image: url(/img/guide.png);
+}
+.main .site_guide_list .item:nth-child(2) .bg-area{
+    background-image: url(/img/search.png);
+}
+.main .site_guide_list .item:nth-child(3) .bg-area{
+    background-image: url(/img/bottom_banner_2.png);
+}
+.main .site_guide_list .item:nth-child(4) .bg-area{
+    background-image: url(/img/people.png);
+}
+.main .site_guide_list .item .txtbox{
+    margin-top: 23px;
+    padding: 0 25px;
+}
+.main .site_guide_list .item .txtbox > h3{
+    font-size: 17px;
+    font-weight: bold;
+}
+.main .site_guide_list .item .txtbox .em-color{
+    color: #14a571;
+}
+.main .site_guide_list .item .txtbox > p{
+    margin-top: 12px;
+    font-size: 13px;
+}
+.main .site_guide_list .item .txtbox .btn-more{
+    display: block;
+    width: 28px;
+    height: 28px;
+    background: url(/img/btn_arrow.png) no-repeat;
+    position: absolute;
+    right: 18px;
+    bottom: 15px;
+}
+
+
+
+/* footer */
+
